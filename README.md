@@ -1,6 +1,6 @@
 # days-on-earth
 
-A Clojure library designed to calculate the days on earth!
+A Clojure library designed to calculate the number of days you have lived on earth!
 
 ## Usage
 
@@ -8,7 +8,7 @@ A Clojure library designed to calculate the days on earth!
 - Add to your leiningen dependencies in project.clj
 `[xbrln/days-on-earth "0.1.0"]`
 - Require in your code `[days-on-earth.core :as doe]`
-- Example use `(doe/calculate 9-9-1980`
+- Example use `(doe/calculate {:year 1980 :month 01 :day 10})`
 
 ## License
 

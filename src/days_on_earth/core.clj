@@ -1,17 +1,14 @@
 (ns days-on-earth.core
-  (:require [clj-time.core :as t]
-            [clojure.string :as str]))
+  (:require [clj-time.core :as t]))
 
 (defn calculate
   "Given a date, return the number of days from that date till today.
-  Date has to be entered in dd/mm/yyyy format, for example 26/02/1980."
+  Input parameter is a map with :year, :month and :day as keywords. Example {:year 1980 :month 01 :day 10}"
   [date]
-  (let [split-date (str/split date #"/")
-        day (Integer. (first split-date))
-        month (Integer. (second split-date))
-        year (Integer. (last split-date))]
-    (t/in-days (t/interval (t/date-time year month day) (t/now)))))
-
+  (t/in-days
+    (t/interval
+      (t/date-time (:year date) (:month date) (:day date))
+      (t/now))))
 
 (comment
-  (calculate "10/02/1980"))
+  (calculate {:year 1980 :month 01 :day 10}))
