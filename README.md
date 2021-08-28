@@ -9,12 +9,14 @@ A Clojure library designed to calculate the number of days you have lived on ear
 `[xbrln/days-on-earth "0.1.0"]`
 - Require in your code `[days-on-earth.core :as doe]`
 - Example
-  `Usage with one arity
+  ```
+  ; Usage with one arity
   (doe/calculate {:year 2021 :month 7 :day 26})
 
   ; Usage with two arities
   (doe/calculate {:year 2021 :month 7 :day 26}
-             {:year 2021 :month 7 :day 28})`
+             {:year 2021 :month 7 :day 28})
+  ```
 
 ## License
 
