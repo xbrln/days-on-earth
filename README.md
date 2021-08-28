@@ -8,7 +8,7 @@ A Clojure library designed to calculate the number of days you have lived on ear
 - Add to your leiningen dependencies in project.clj
 `[xbrln/days-on-earth "0.1.0"]`
 - Require in your code `[days-on-earth.core :as doe]`
-- Example use `(doe/calculate {:year 1980 :month 01 :day 10})`
+- Example use `(doe/calculate {:year 1980 :month 1 :day 10})`
 
 ## License
 
